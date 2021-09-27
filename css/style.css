@@ -39,3 +39,28 @@ body {
 .logo{
     height: 35px;
 }
+
+.text-box{
+    position: absolute; /*posiciona respecto al header que es el 1º padre con posicion*/
+    top: 50%;   /*damos margenes arriba y a la izquierda, hay que poner el transform porque sino nos centra la esquina, no el texto en si*/
+    left: 50%;
+    transform: translate(-50%, -50%); /*aplica una translacion aun elemento sobre su ancho y alto*/
+}
+
+.heading-primary{
+    color: #fff;
+    text-decoration: uppercase;
+}
+
+.heading-primary-main{
+    display: block;
+    font-size: 60px;
+    font-weight: 700;
+    letter-spacing: 35px;
+}
+.heading-primary-sub{
+    display: block;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 17.4px;
+}
