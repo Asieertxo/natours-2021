@@ -49,7 +49,7 @@ body {
 
 .heading-primary{
     color: #fff;
-    text-decoration: uppercase;
+    text-decoration: uppercase; 
 }
 
 .heading-primary-main{
@@ -57,10 +57,46 @@ body {
     font-size: 60px;
     font-weight: 700;
     letter-spacing: 35px;
+    animation-name: mueveIzq; /*seleccionmos la animacion y el tiempo*/
+    animation-duration: 1s;
+    animation-timing-function: ease-out; /*hace que decelere*/
 }
 .heading-primary-sub{
     display: block;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 17.4px;
+    letter-spacing: 15.9px;
+    animation-name: mueveDer; /*seleccionmos la animacion y el tiempo*/
+    animation-duration: 1s;
+}
+
+@keyframes mueveIzq {
+    0%{ /*en el momento inicial*/
+        opacity: 0; /*elemento oculto*/
+        transform: translateX(-100px) scale(1); /*trasladar horizontalmente a la izquierda sobre si mismo*/
+    }
+    50%{
+        transform: scale(1.2);/*hacemos que se haga mas grande o pequeño*/
+    }
+    75%{
+        transform: translateX(+10px);/*su posicion natural*/
+    }
+    100%{ /*en el estado final*/
+        opacity: 1; /*elemento se ve*/
+        transform: translateX(0);/*su posicion natural*/
+        transform: scale(1);
+    }
+}
+@keyframes mueveDer {
+    0%{ /*en el momento inicial*/
+        opacity: 0; /*elemento oculto*/
+        transform: translateX(+50px); /*trasladar horizontalmente a la izquierda sobre si mismo*/
+    }
+    75%{ /*en el estado final*/
+        transform: translateX(-10px);/*su posicion natural*/
+    }
+    100%{ /*en el estado final*/
+        opacity: 1; /*elemento se ve*/
+        transform: translateX(0);/*su posicion natural*/
+    }
 }
