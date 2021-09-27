@@ -69,6 +69,23 @@ body {
     animation-name: mueveDer; /*seleccionmos la animacion y el tiempo*/
     animation-duration: 1s;
 }
+.btn:link
+.btn:visited{
+    text-decoration: uppercase;
+    text-decoration: none;
+    padding: 15px 40px;
+}
+.btn-white{
+    background-color: #fff;
+    color: #777;
+}
+
+
+
+
+
+
+
 
 @keyframes mueveIzq {
     0%{ /*en el momento inicial*/
