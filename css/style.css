@@ -42,14 +42,16 @@ body {
 
 .text-box{
     position: absolute; /*posiciona respecto al header que es el 1º padre con posicion*/
-    top: 50%;   /*damos margenes arriba y a la izquierda, hay que poner el transform porque sino nos centra la esquina, no el texto en si*/
+    top: 40%;   /*damos margenes arriba y a la izquierda, hay que poner el transform porque sino nos centra la esquina, no el texto en si*/
     left: 50%;
     transform: translate(-50%, -50%); /*aplica una translacion aun elemento sobre su ancho y alto*/
+    text-align: center;
 }
 
 .heading-primary{
     color: #fff;
-    text-decoration: uppercase; 
+    text-transform: uppercase;
+    backface-visibility: hidden; /*puesto pero ns*/
 }
 
 .heading-primary-main{
@@ -65,19 +67,48 @@ body {
     display: block;
     font-size: 20px;
     font-weight: 400;
-    letter-spacing: 15.9px;
+    letter-spacing: 17.4px;
     animation-name: mueveDer; /*seleccionmos la animacion y el tiempo*/
     animation-duration: 1s;
 }
-.btn:link
+
+.btn:link,
 .btn:visited{
-    text-decoration: uppercase;
+    text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
+    display: inline-block;
+    border-radius: 100px;
+    transition: all 0.2s;
+    position: relative;
 }
+.btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+
+}
+.btn:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+.btn::after{
+    content: "AFTER";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
 .btn-white{
     background-color: #fff;
     color: #777;
+}
+.btn-white::after{
+    background-color: red;
 }
 
 
