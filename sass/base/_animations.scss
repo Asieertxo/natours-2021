@@ -1,0 +1,43 @@
+@keyframes mueveIzq {
+    0%{ /*en el momento inicial*/
+        opacity: 0; /*elemento oculto*/
+        transform: translateX(-10rem) scale(1); /*trasladar horizontalmente a la izquierda sobre si mismo*/
+    }
+    50%{
+        transform: scale(1.2);/*hacemos que se haga mas grande o pequeño*/
+    }
+    75%{
+        transform: translateX(+1rem);/*su posicion natural*/
+    }
+    100%{ /*en el estado final*/
+        opacity: 1; /*elemento se ve*/
+        transform: translateX(0);/*su posicion natural*/
+        transform: scale(1);
+    }
+}
+@keyframes mueveDer {
+    0%{ /*en el momento inicial*/
+        opacity: 0; /*elemento oculto*/
+        transform: translateX(+5rem); /*trasladar horizontalmente a la izquierda sobre si mismo*/
+    }
+    75%{ /*en el estado final*/
+        transform: translateX(-1rem);/*su posicion natural*/
+    }
+    100%{ /*en el estado final*/
+        opacity: 1; /*elemento se ve*/
+        transform: translateX(0);/*su posicion natural*/
+    }
+}
+
+
+@keyframes moveInButton {
+    0% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
